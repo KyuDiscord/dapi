@@ -19,7 +19,7 @@ export interface APIGuild {
   icon?: string | null;
   splash?: string | null;
   discovery_splash?: string | null;
-  owner?: string;
+  owner_id?: string;
   permissions?: number;
   region: string;
   afk_channel_id?: string;
