@@ -1,5 +1,5 @@
 import { APIUser } from "./User";
-import { APIOverwrite } from "./guild/Overwrite";
+import { APIOverwrite } from "./guild";
 
 export interface APIChannelPartial {
   id: string;

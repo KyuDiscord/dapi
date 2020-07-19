@@ -67,7 +67,7 @@ export interface APIGuildWidget {
   channel_id: string | null;
 }
 
-export interface APIGuildPreview extends Omit<APIGuildUnavailable, 'unavailable'> {
+export interface APIGuildPreview extends Omit<APIGuildUnavailable, "unavailable"> {
   discovery_splash: string | null;
   emojis: APIEmoji[];
   features: GuildFeatures[];
@@ -82,54 +82,54 @@ export interface APIGuildVanity {
 }
 
 export const enum GuildDefaultMessageNotifications {
-  AllMessages,
-  OnlyMentions
+  ALL_MESSAGES,
+  ONLY_MENTIONS
 }
 
 export const enum GuildExplicitContentFilterLevel {
-  Disabled,
-  MembersWithoutRoles,
-  AllMembers
+  DISABLED,
+  MEMBERS_WITHOUT_ROLE,
+  ALL_MEMBERS
 }
 
 export const enum GuildFeatures {
-  InviteSplash = 'INVITE_SPLASH',
-  VipRegion = 'VIP_REGIONS',
-  VanityUrl = 'VANITY_URL',
-  Verified = 'VERIFIED',
-  Partnered = 'PARTNERED',
-  Public = 'PUBLIC',
-  Commerce = 'COMMERCE',
-  News = 'NEWS',
-  Discoverable = 'DISCOVERABLE',
-  Featurable = 'FEATURABLE',
-  AnimatedIcon = 'ANIMATED_ICON',
-  Banner = 'BANNER',
-  PublicDisabled = 'PUBLIC_DISABLED',
-  WelcomeScreenEnabled = 'WELCOME_SCREEN_ENABLED'
+  INVITE_SPLASH = "INVITE_SPLASH",
+  VIP_REGION = "VIP_REGIONS",
+  VANITY_URL = "VANITY_URL",
+  VERIFIED = "VERIFIED",
+  PARTNERED = "PARTNERED",
+  PUBLIC = "PUBLIC",
+  COMMERCE = "COMMERCE",
+  NEWS = "NEWS",
+  DISCOVERABLE = "DISCOVERABLE",
+  FEATURABLE = "FEATURABLE",
+  ANIMATED_ICON = "ANIMATED_ICON",
+  BANNER = "BANNER",
+  PUBLIC_DISABLED = "PUBLIC_DISABLED",
+  WELCOME_SCREEN_ENABLED = "WELCOME_SCREEN_ENABLED"
 }
 
 export const enum GuildMFALevel {
-  None,
-  Elevated
+  NONE,
+  ELEVATED
 }
 
 export const enum GuildVerificationLevel {
-  None,
-  Low,
-  Medium,
-  High,
-  VeryHigh
+  NONE,
+  LOW,
+  MEDIUM,
+  HIGH,
+  VERY_HIGH
 }
 
 export const enum GuildSystemChannelFlags {
-  SuppressJoinNotifications = 1 << 0,
-  SuppressPremiumSubscriptions = 1 << 1
+  SUPPRESS_JOIN_NOTIFICATIONS = 1 << 0,
+  SUPPRESS_PREMIUM_SUBSCRIPTIONS = 1 << 1
 }
 
 export const enum GuildPremiumTier {
-  None,
-  Tier1,
-  Tier2,
-  Tier3
+  NONE,
+  TIER_1,
+  TIER_2,
+  TIER_3
 }

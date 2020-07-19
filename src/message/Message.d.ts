@@ -4,7 +4,7 @@ import { APIEmbed } from "./Embed";
 import { APIReaction } from "./index";
 import { ChannelType } from "../Channel";
 
-export type APIMessageMention = APIUser & { member?: Omit<APIGuildMember, 'user'> };
+export type APIMessageMention = APIUser & { member?: Omit<APIGuildMember, "user"> };
 
 export interface APIMessage {
   id: string;

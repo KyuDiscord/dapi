@@ -38,6 +38,6 @@ export const enum WebhookType {
 }
 
 export const enum ConnectionVisibility {
-  None,
-  Everyone
+  NONE,
+  EVERYONE
 }
