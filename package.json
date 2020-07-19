@@ -1,0 +1,13 @@
+{
+  "name": "@kyu-bot/dapi",
+  "version": "1.0.0",
+  "description": "Discord typings for neo",
+  "main": "",
+  "types": "src/index.d.ts",
+  "repository": "https://github.com/kyudiscord/dapi",
+  "author": "MeLike2D",
+  "devDependencies": {
+    "@types/node": "^14.0.23",
+    "typescript": "^3.9.7"
+  }
+}

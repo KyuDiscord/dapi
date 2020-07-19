@@ -1,0 +1,23 @@
+{
+  "exclude": ["./node_modules", "./dist"],
+  "include": ["./lib/**/*"],
+  "compilerOptions": {
+    /* Basic */
+    "lib": ["ES2020"],
+
+    /* Strict Options */
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+
+    /* Types */
+    "types": ["node"],
+  }
+}
