@@ -1,9 +1,19 @@
 {
   "exclude": ["./node_modules", "./dist"],
-  "include": ["./lib/**/*"],
+  "include": ["index.ts"],
   "compilerOptions": {
+    "experimentalDecorators": true,
     /* Basic */
     "lib": ["ES2020"],
+    "target": "ES2020",
+    "module": "CommonJS",
+    "skipLibCheck": true,
+
+    /* Compiling */
+    "incremental": true,
+    "inlineSourceMap": true,
+    "declaration": true,
+    "allowJs": true,
 
     /* Strict Options */
     "strict": true,
@@ -16,8 +26,14 @@
     "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "pretty": true,
 
     /* Types */
     "types": ["node"],
+    "forceConsistentCasingInFileNames": true,
+
+    /* Module Resolution */
+    "resolveJsonModule": true,
+    "esModuleInterop": true
   }
 }
