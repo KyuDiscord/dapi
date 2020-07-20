@@ -10,7 +10,7 @@ export interface APIConnection {
   visibility: ConnectionVisibility;
 }
 
-export interface APIWebhookData {
+export interface APIWebhook {
   id: string;
   type: WebhookType;
   guild_id?: string;
@@ -112,7 +112,7 @@ export interface APIGuildVanity {
   uses: number;
 }
 
-export interface APIBanData {
+export interface APIBan {
   reason: string | null;
   user: APIUser;
 }
@@ -145,11 +145,11 @@ export interface APIIntegration {
   expire_behavior: IntegrationExpireBehavior;
   expire_grace_period: number;
   user: APIUser;
-  account: APIIntegrationAccountData;
+  account: APIIntegrationAccount;
   synced_at: string;
 }
 
-export interface APIIntegrationAccountData {
+export interface APIIntegrationAccount {
   id: string;
   name: string;
 }
@@ -165,7 +165,7 @@ export interface APIInvite {
   approximate_member_count?: number;
 }
 
-export interface APIInviteMetadata {
+export interface APIInviteMeta {
   uses: number;
   max_uses: number;
   max_age: number;
@@ -314,6 +314,138 @@ export interface APIUser {
   public_flags?: number;
 }
 
+export interface APIReaction {
+  count: number;
+  me: boolean;
+  emoji: APIEmojiPartial;
+}
+
+export interface APIMessage {
+  id: string;
+  channel_id: string;
+  guild_id?: string;
+  author: APIUser;
+  member?: APIGuildMember;
+  content: string;
+  timestamp: string;
+  edited_timestamp: string | null;
+  tts: boolean;
+  mention_everyone: boolean;
+  mentions: APIMessageMention[];
+  mention_roles: string[];
+  mention_channels: APIMessageMentionChannel[];
+  attachments: APIMessageAttachment[];
+  embeds: APIEmbed[];
+  reactions?: APIReaction[];
+  nonce?: string | null;
+  pinned: boolean;
+  webhook_id?: string;
+  type: MessageType;
+  activity?: APIMessageActivity;
+  application?: APIMessageApplication;
+  message_reference?: APIMessageReference;
+  flags?: APIMessageFlags;
+}
+
+export interface APIMessageAttachment {
+  id: string;
+  filename: string;
+  size: number;
+  url: string;
+  proxy_url: string;
+  height: number | null;
+  width: number | null;
+}
+
+export interface APIMessageActivity {
+  type: MessageActivityType;
+  party_id?: string;
+}
+
+export interface APIMessageApplication {
+  id: string;
+  cover_image?: string;
+  description: string;
+  icon: string | null;
+  name: string;
+}
+
+export interface APIMessageReference {
+  message_id?: string;
+  channel_id: string;
+  guild_id?: string;
+}
+
+export type APIMessageMention = APIUser & { member?: Omit<APIGuildMember, 'user'> };
+
+export interface APIMessageMentionChannel {
+  id: string;
+  guild_id: string;
+  type: ChannelType;
+  name: string;
+}
+
+export type EmbedType = 'link' | 'rich' | 'image' | 'video' | 'gifv' | 'article' | 'application_news';
+
+export interface APIEmbed {
+  title?: string;
+  type?: EmbedType;
+  description?: string;
+  url?: string;
+  timestamp?: string;
+  color?: number;
+  footer?: APIEmbedFooter;
+  image?: APIEmbedImage;
+  thumbnail?: APIEmbedThumbnail;
+  video?: APIEmbedVideo;
+  provider?: APIEmbedProvider;
+  author?: APIEmbedAuthor;
+  fields?: APIEmbedField[];
+}
+
+export interface APIEmbedFooter {
+  text: string;
+  icon_url?: string;
+  proxy_icon_url?: string;
+}
+
+export interface APIEmbedImage {
+  url?: string;
+  proxy_url?: string;
+  height?: number;
+  width?: number;
+}
+
+export interface APIEmbedThumbnail {
+  url?: string;
+  proxy_url?: string;
+  height?: number;
+  width?: number;
+}
+
+export interface APIEmbedVideo {
+  url?: string;
+  height?: number;
+  width?: number;
+}
+
+export interface APIEmbedProvider {
+  name?: string;
+  url?: string;
+}
+
+export interface APIEmbedAuthor {
+  name?: string;
+  url?: string;
+  icon_url?: string;
+  proxy_icon_url?: string;
+}
+
+export interface APIEmbedField {
+  name: string;
+  value: string;
+  inline?: boolean;
+}
 
 export enum InviteTargetUserType {
   STREAM = 1
