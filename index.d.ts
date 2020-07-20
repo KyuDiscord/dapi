@@ -285,23 +285,23 @@ export interface APIUser {
     premium_type?: PremiumType;
     public_flags?: number;
 }
-export declare const enum InviteTargetUserType {
+export declare enum InviteTargetUserType {
     STREAM = 1
 }
-export declare const enum IntegrationExpireBehavior {
+export declare enum IntegrationExpireBehavior {
     REMOVE_ROLE = 0,
     KICK = 1
 }
-export declare const enum GuildMessageNotificationType {
+export declare enum GuildMessageNotificationType {
     ALL_MESSAGES = 0,
     ONLY_MENTIONS = 1
 }
-export declare const enum GuildContentFilter {
+export declare enum GuildContentFilter {
     DISABLED = 0,
     MEMBERS_WITHOUT_ROLE = 1,
     ALL_MEMBERS = 2
 }
-export declare const enum GuildFeatures {
+export declare enum GuildFeatures {
     INVITE_SPLASH = "INVITE_SPLASH",
     VIP_REGION = "VIP_REGIONS",
     VANITY_URL = "VANITY_URL",
@@ -317,41 +317,41 @@ export declare const enum GuildFeatures {
     PUBLIC_DISABLED = "PUBLIC_DISABLED",
     WELCOME_SCREEN_ENABLED = "WELCOME_SCREEN_ENABLED"
 }
-export declare const enum GuildMFALevel {
+export declare enum GuildMFALevel {
     NONE = 0,
     ELEVATED = 1
 }
-export declare const enum GuildVerificationLevel {
+export declare enum GuildVerificationLevel {
     NONE = 0,
     LOW = 1,
     MEDIUM = 2,
     HIGH = 3,
     VERY_HIGH = 4
 }
-export declare const enum GuildSystemChannelFlags {
+export declare enum GuildSystemChannelFlags {
     SUPPRESS_JOIN_NOTIFICATIONS = 1,
     SUPPRESS_PREMIUM_SUBSCRIPTIONS = 2
 }
-export declare const enum GuildPremiumTier {
+export declare enum GuildPremiumTier {
     NONE = 0,
     TIER_1 = 1,
     TIER_2 = 2,
     TIER_3 = 3
 }
-export declare const enum APIMessageFlags {
+export declare enum APIMessageFlags {
     CROSSPOSTED = 1,
     IS_CROSSPOST = 2,
     SUPPRESS_EMBEDS = 4,
     SOURCE_MESSAGE_DELETED = 8,
     URGENT = 16
 }
-export declare const enum MessageActivityType {
+export declare enum MessageActivityType {
     JOIN = 1,
     SPECTATE = 2,
     LISTEN = 3,
     JOIN_REQUEST = 4
 }
-export declare const enum MessageType {
+export declare enum MessageType {
     DEFAULT = 0,
     RECIPIENT_ADD = 1,
     RECIPIENT_REMOVE = 2,
@@ -380,7 +380,7 @@ export declare enum PresenceStatus {
     ONLINE = "online",
     OFFLINE = "offline"
 }
-export declare const enum ChannelType {
+export declare enum ChannelType {
     GUILD_TEXT = 0,
     DM = 1,
     GUILD_VOICE = 2,
@@ -389,11 +389,11 @@ export declare const enum ChannelType {
     GUILD_NEWS = 5,
     GUILD_STORE = 6
 }
-export declare const enum WebhookType {
+export declare enum WebhookType {
     INCOMING = 1,
     CHANNEL_FOLLOWER = 2
 }
-export declare const enum ConnectionVisibility {
+export declare enum ConnectionVisibility {
     NONE = 0,
     EVERYONE = 1
 }

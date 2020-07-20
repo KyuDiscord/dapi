@@ -315,27 +315,27 @@ export interface APIUser {
 }
 
 
-export const enum InviteTargetUserType {
+export enum InviteTargetUserType {
   STREAM = 1
 }
 
-export const enum IntegrationExpireBehavior {
+export enum IntegrationExpireBehavior {
   REMOVE_ROLE,
   KICK
 }
 
-export const enum GuildMessageNotificationType {
+export enum GuildMessageNotificationType {
   ALL_MESSAGES,
   ONLY_MENTIONS
 }
 
-export const enum GuildContentFilter {
+export enum GuildContentFilter {
   DISABLED,
   MEMBERS_WITHOUT_ROLE,
   ALL_MEMBERS
 }
 
-export const enum GuildFeatures {
+export enum GuildFeatures {
   INVITE_SPLASH = "INVITE_SPLASH",
   VIP_REGION = "VIP_REGIONS",
   VANITY_URL = "VANITY_URL",
@@ -352,12 +352,12 @@ export const enum GuildFeatures {
   WELCOME_SCREEN_ENABLED = "WELCOME_SCREEN_ENABLED"
 }
 
-export const enum GuildMFALevel {
+export enum GuildMFALevel {
   NONE,
   ELEVATED
 }
 
-export const enum GuildVerificationLevel {
+export enum GuildVerificationLevel {
   NONE,
   LOW,
   MEDIUM,
@@ -365,19 +365,19 @@ export const enum GuildVerificationLevel {
   VERY_HIGH
 }
 
-export const enum GuildSystemChannelFlags {
+export enum GuildSystemChannelFlags {
   SUPPRESS_JOIN_NOTIFICATIONS = 1 << 0,
   SUPPRESS_PREMIUM_SUBSCRIPTIONS = 1 << 1
 }
 
-export const enum GuildPremiumTier {
+export enum GuildPremiumTier {
   NONE,
   TIER_1,
   TIER_2,
   TIER_3
 }
 
-export const enum APIMessageFlags {
+export enum APIMessageFlags {
   CROSSPOSTED = 1 << 0,
   IS_CROSSPOST = 1 << 1,
   SUPPRESS_EMBEDS = 1 << 2,
@@ -385,14 +385,14 @@ export const enum APIMessageFlags {
   URGENT = 1 << 4
 }
 
-export const enum MessageActivityType {
+export enum MessageActivityType {
   JOIN = 1,
   SPECTATE,
   LISTEN,
   JOIN_REQUEST
 }
 
-export const enum MessageType {
+export enum MessageType {
   DEFAULT,
   RECIPIENT_ADD,
   RECIPIENT_REMOVE,
@@ -424,7 +424,7 @@ export enum PresenceStatus {
   OFFLINE = "offline"
 }
 
-export const enum ChannelType {
+export enum ChannelType {
   GUILD_TEXT,
   DM,
   GUILD_VOICE,
@@ -434,12 +434,12 @@ export const enum ChannelType {
   GUILD_STORE,
 }
 
-export const enum WebhookType {
+export enum WebhookType {
   INCOMING = 1,
   CHANNEL_FOLLOWER
 }
 
-export const enum ConnectionVisibility {
+export enum ConnectionVisibility {
   NONE,
   EVERYONE
 }
