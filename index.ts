@@ -223,24 +223,32 @@ export interface APIActivity {
   type: ActivityType;
   url?: string | null;
   created_at: number;
-  timestamps?: {
-    start?: number;
-    end?: number;
-  };
+  timestamps?: APIActivityTimestamp;
   application_id?: string;
   details?: string | null;
   state?: string | null;
-  emoji?: APIEmoji | null;
+  emoji?: APIActivityEmoji | null;
   party?: APIActivityParty;
   assets?: APIActivityAssets;
   secrets?: APIActivitySecrets;
   instance?: boolean;
-  flags?: number;
+  flags?: ActivityFlags;
+}
+
+export interface APIActivityTimestamp {
+  start?: number;
+  end?: number;
+}
+
+export interface APIActivityEmoji {
+  name: string;
+  id?: string;
+  animated?: boolean;
 }
 
 export interface APIActivityParty {
-  id: string;
-  size?: [ number, number ];
+  id?: string;
+  size?: [number, number];
 }
 
 export interface APIActivityAssets {
@@ -254,6 +262,15 @@ export interface APIActivitySecrets {
   join?: string;
   spectate?: string;
   match?: string;
+}
+
+export const enum ActivityFlags {
+  INSTANCE = 1 << 0,
+  JOIN = 1 << 1,
+  SPECTATE = 1 << 2,
+  JOIN_REQUEST = 1 << 3,
+  SYNC = 1 << 4,
+  PLAY = 1 << 5
 }
 
 export interface APIChannelPartial {
