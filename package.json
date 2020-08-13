@@ -1,6 +1,6 @@
 {
-  "name": "@kyu-bot/dapi",
-  "version": "1.0.5",
+  "name": "@kyudiscord/dapi",
+  "version": "1.0.6",
   "description": "Discord typings for neo",
   "main": "index.js",
   "types": "index.d.ts",
